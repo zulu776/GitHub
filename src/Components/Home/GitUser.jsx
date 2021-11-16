@@ -40,7 +40,7 @@ const GitUser = () => {
 
                 <div className="flex justify-center items-center">
                     <div className="w-2/6 h-11 flex justify-center items-center">
-                        <a className="">
+                        
                             <Link to={`/Followers/${infoUser.login}`} className="flex flex-col items-center w-5/6 mt-4">
                                 <TeamOutlined className="w-4 h-4" />
                                 <p className="">
@@ -50,7 +50,7 @@ const GitUser = () => {
                                     {infoUser.followers}
                                 </p>
                             </ Link>
-                        </a>
+                        
                     </div>
 
                     <Divider type="vertical" className="bg-black"/>
@@ -70,7 +70,7 @@ const GitUser = () => {
                     <Divider type="vertical" className="bg-black"/>
 
                     <div className="w-2/6 h-11 flex justify-center items-center">
-                        <a className="">
+                        
                             <Link to={`/Following/${infoUser.login}`} className="flex flex-col items-center w-5/6 mt-4">
                                 <UserOutlined className="w-4 h-4" />
                                 <p>
@@ -80,7 +80,7 @@ const GitUser = () => {
                                     {infoUser.following}
                                 </p>
                             </ Link>
-                        </a>
+                        
                     </div>
                 </div>
 

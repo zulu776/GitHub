@@ -9,7 +9,6 @@ const Home = () => {
 
     const {
         infoUser,
-        handleFollower,handleFollowing,
     } = useContext(GitHubContext);
 
     return (

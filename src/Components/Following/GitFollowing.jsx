@@ -7,11 +7,9 @@ import { CodepenCircleOutlined } from '@ant-design/icons';
 //CSS
 import 'antd/dist/antd.css';
 
-
-
 const { Meta } = Card;
-const GitFollowers = ({avatar,login,repos}) => {
 
+const GitFollowing = ({avatar,login,repos}) => {
     return (
         <div className="flex justify-center mt-6">
             <Card
@@ -43,4 +41,4 @@ const GitFollowers = ({avatar,login,repos}) => {
     )
 }
 
-export default GitFollowers
+export default GitFollowing

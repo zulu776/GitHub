@@ -18,18 +18,17 @@ const Followers = () => {
       
     } = useContext(GitHubContext);
 
- useEffect(() => {
-    setFollowers([]);
-    const handleUserFollowers = async () => {
-      const response = await fetch(`https://api.github.com/users/${name}/followers`);
-      const result = await response.json();
-      setFollowers(result);
-  
-    };
-    handleUserFollowers();
-  }, [name]);
-
-  console.log(followers)
+    useEffect(() => {
+        setFollowers([]);
+        const handleUserFollowers = async () => {
+        const response = await fetch(`https://api.github.com/users/${name}/followers`);
+        const result = await response.json();
+        setFollowers(result);
+    
+        };
+        handleUserFollowers();
+        // eslint-disable-next-line react-hooks/exhaustive-deps 
+    }, [name]);
  
     return (
         <div>
