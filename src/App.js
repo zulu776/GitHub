@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
+//LayOut
+import MainLayout from "./Layout/MainLayout"
+
+//Context
+import { GitHubProvider } from "./Context/GitHubContext";
+
+//Components
+import Home from "./View/Home/Home";
+import Followers from "./View/Followers/Followers";
+import Following from "./View/Following/Following";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GitHubProvider>
+      <Router>
+        <Switch>
+          <MainLayout>
+
+            <Route path="/" exact>
+              <Home />
+            </Route>
+
+            <Route path="/Followers/:name" exact>
+              <Followers />
+            </Route>
+
+            <Route path="/Following/:name" exact>
+              <Following />
+            </Route>
+            
+          </MainLayout>
+        </Switch>
+      </Router>
+    </GitHubProvider>
   );
 }
 
